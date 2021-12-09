@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class point : MonoBehaviour
 {
-    public static int points = 0;
+    public static int points = 100;
     // Start is called before the first frame update
     void Start()
     {

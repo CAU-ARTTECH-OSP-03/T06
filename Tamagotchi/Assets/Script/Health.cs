@@ -24,6 +24,8 @@ public class Health : MonoBehaviour
     public Button bath;
     public Button sleeping;
 
+    
+
 
     private void Start()
     {
@@ -50,24 +52,24 @@ public class Health : MonoBehaviour
 
    private void Update()
     {
-        happiness -= 5.5f * Time.deltaTime;
+        happiness -= 0.5f * Time.deltaTime;
         if(happiness < 0)
         {
             happiness = 0;
         } 
 
-        hunger -= 6f * Time.deltaTime;
+        hunger -= 0.7f * Time.deltaTime;
         if(hunger < 0)
         {
             hunger = 0;
         } 
         
-        sleep-= 5.7f * Time.deltaTime;
+        sleep -= 0.4f * Time.deltaTime;
         if(sleep < 0)
         {
             sleep = 0;
         } 
-        hygiene-= 5.75f * Time.deltaTime;
+        hygiene -= 0.9f * Time.deltaTime;
         if(hygiene < 0)
         {
             hygiene = 0;
@@ -112,36 +114,59 @@ public class Health : MonoBehaviour
     }
 
     void feedingPet(){
-        hunger += 15;
-        if (hunger  > max){
-            hunger = max;
-        }
+        if(hunger<99){
+            if(point.points > 5){
+            point.points -= 5;
+            hunger += 15;
+            if (hunger  > max){
+                hunger = max;
+            }
+            }
         UpdateHunger();
-
+            
+        }
 
     }
     void cleaningPet(){
-        hygiene += (max - hygiene);
-        if (hygiene  > max){
+        if(hygiene<99){
+            if(point.points > 5){
+            point.points -= 5;
+            hygiene += (max - hygiene);
+            if (hygiene  > max){
             hygiene = max;
-        }
+            }
+            }
+            }
+        
         UpdateHygiene();
     }
     void sleepingPet(){
-        sleep += 15;
+        if(sleep<99){
+            if(point.points > 5){
+            point.points -= 5;
+           sleep += 15;
         if (sleep  > max){
             sleep = max;
         }
         UpdateSleep();
+            
+        }
+        }
 
     }
-    void playingPet(){        
+    void playingPet(){       
+        if(sleep<99){
         happiness += 30;
         if (happiness  > max){
             happiness = max;
         }
         UpdateHappy();
+            
+        }
+        } 
+       
+        
 
-    }
 }
+
 
