@@ -14,11 +14,11 @@ public class Health : MonoBehaviour
     public Text HungerText;
     public Text SleepText;
 
-    private float happiness = 100;
-    private float hygiene = 100;
-    private float hunger = 100;
-    private float sleep = 100;
-    private float max = 100;
+    public static float happiness = 100;
+    public static float hygiene = 100;
+    public static float hunger = 100;
+    public static float sleep = 100;
+    public static float max = 100;
 
     public Button feeding;
     public Button bath;
@@ -27,8 +27,7 @@ public class Health : MonoBehaviour
     
 
 
-    private void Start()
-    {
+    private void Start(){
         Button bt1 = feeding.GetComponent<Button>();
         bt1.onClick.AddListener(feedingPet);
         bt1.onClick.AddListener(playingPet);
@@ -47,6 +46,8 @@ public class Health : MonoBehaviour
         UpdateSleep();
 
         Update();
+    
+
     }
 
 
