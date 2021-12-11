@@ -32,7 +32,7 @@ namespace PedometerU.Pets{
             }
 
         void Update(){
-            point.points = pedometer.updateCount;
+            point.points =point.points + pedometer.updateCount;
 
         }
 
