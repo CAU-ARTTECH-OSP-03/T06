@@ -10,7 +10,7 @@ public class switchavatar : MonoBehaviour
     public Button button;
 
     float timer = 0;
-    float difftimer = 1;
+    float difftimer = 3;
 
    
     // Start is called before the first frame update
