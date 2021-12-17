@@ -9,16 +9,22 @@ public class HappytoCry : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+     //   anim.SetBool("death",true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Health.happiness > 80){
+        if (Health.happiness > 80f){
             anim.SetBool("happytocry",true);
         }
-        else if (Health.happiness <= 80){
-             anim.SetBool("happytocry",false);
+        else if (Health.happiness <= 80f ){
+            anim.SetBool("happytocry",false);
+        }
+
+
+         if (Health.happiness <= 1 ){
+            anim.SetBool("death",false);
         }
     }
 }
