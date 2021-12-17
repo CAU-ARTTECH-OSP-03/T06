@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class jump : MonoBehaviour
 {
+
     Rigidbody2D rb;
     public string scene;
     public float power;

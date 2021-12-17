@@ -24,10 +24,12 @@ public class Health : MonoBehaviour
     public Button bath;
     public Button sleeping;
 
+
     
 
 
     private void Start(){
+
         Button bt1 = feeding.GetComponent<Button>();
         bt1.onClick.AddListener(feedingPet);
         bt1.onClick.AddListener(playingPet);
@@ -46,6 +48,7 @@ public class Health : MonoBehaviour
         UpdateSleep();
 
         Update();
+
     
 
     }
@@ -76,11 +79,18 @@ public class Health : MonoBehaviour
             hygiene = 0;
         } 
 
+        
+
+
         UpdateHappy();
         UpdateHunger();
         UpdateHygiene();
         UpdateSleep();
-    }
+
+
+
+
+    } 
 
 
 
@@ -113,6 +123,7 @@ public class Health : MonoBehaviour
         
 
     }
+
 
     void feedingPet(){
         if(hunger<99){
@@ -164,8 +175,7 @@ public class Health : MonoBehaviour
         UpdateHappy();
             
         }
-        } 
-       
+        }
         
 
 }
