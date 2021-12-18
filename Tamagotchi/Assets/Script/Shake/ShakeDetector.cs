@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 
 [RequireComponent(typeof(PhysicsController))]
@@ -14,7 +15,7 @@ public class ShakeDetector : MonoBehaviour
     private PhysicsController physicsController; 
     public Text ShakeText;
     public int Shakecounter = 0;
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,9 @@ public class ShakeDetector : MonoBehaviour
             point.points = point.points + 1;
             ShakeText.text = Shakecounter.ToString();
             Shakecounter += 1;
+
+            CameraShaker.Instance.ShakeOnce(4f,3f, .2f,.2f);
+
         }
     }
 }
