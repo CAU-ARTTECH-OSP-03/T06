@@ -56,6 +56,7 @@ public class Health : MonoBehaviour
 
    private void Update()
     {
+        Time.timeScale = 1;
         happiness -= 0.5f * Time.deltaTime;
         if(happiness < 0)
         {

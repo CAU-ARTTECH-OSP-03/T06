@@ -7,14 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/maindisplay.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/minigame2.unity
-    guid: 1932bc0a5984e044fbce44cc35a2c511
-  - enabled: 1
-    path: Assets/Scenes/minigame1.unity
-    guid: e948299ae6a83a14fb5eb77b6a79c304
+    guid: b79f58002d979db43aa89dd9468dbe4c
   - enabled: 1
     path: Assets/Scenes/gameover.unity
     guid: d9678622fafb5ad40a7ecb783bb7ff1f
+  - enabled: 1
+    path: Assets/dinosaur1/Scenes/Game1.unity
+    guid: 8a5b4fee4515c0d4f9b1db02593bc7ab
+  - enabled: 1
+    path: Assets/dinosaur2/Scenes/Game2.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/TiltGame/Scenes/SampleScene.unity
+    guid: 9aa7097a2d2d9ae4f886d4b7ae1b871b
   m_configObjects: {}
